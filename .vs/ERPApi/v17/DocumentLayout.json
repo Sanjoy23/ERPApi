@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Sanjoy\\My Porject\\ERPApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|d:\\sanjoy\\my porject\\erpapi\\erpapi\\data\\erpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|solutionrelative:erpapi\\data\\erpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2060796682:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ERPDbContext.cs",
+              "DocumentMoniker": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Data\\ERPDbContext.cs",
+              "RelativeDocumentMoniker": "ERPApi\\Data\\ERPDbContext.cs",
+              "ToolTip": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Data\\ERPDbContext.cs",
+              "RelativeToolTip": "ERPApi\\Data\\ERPDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T12:14:11.626Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
