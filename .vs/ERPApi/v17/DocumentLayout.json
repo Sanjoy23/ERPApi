@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Sanjoy\\My Porject\\ERPApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|d:\\sanjoy\\my porject\\erpapi\\erpapi\\implementations\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|solutionrelative:erpapi\\implementations\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|d:\\sanjoy\\my porject\\erpapi\\erpapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|solutionrelative:erpapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|d:\\sanjoy\\my porject\\erpapi\\erpapi\\repository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|solutionrelative:erpapi\\repository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|d:\\sanjoy\\my porject\\erpapi\\erpapi\\data\\erpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D76A930-85E0-47F6-9074-24F5949220E4}|ERPApi\\ERPApi.csproj|solutionrelative:erpapi\\data\\erpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,15 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Implementations\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "ERPApi\\Implementations\\OrderRepository.cs",
+              "ToolTip": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Implementations\\OrderRepository.cs",
+              "RelativeToolTip": "ERPApi\\Implementations\\OrderRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T15:10:34.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "ERPApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "ERPApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAAFAAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T15:05:46.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Repository\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "ERPApi\\Repository\\IOrderRepository.cs",
+              "ToolTip": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Repository\\IOrderRepository.cs",
+              "RelativeToolTip": "ERPApi\\Repository\\IOrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T15:05:22.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ERPDbContext.cs",
               "DocumentMoniker": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Data\\ERPDbContext.cs",
               "RelativeDocumentMoniker": "ERPApi\\Data\\ERPDbContext.cs",
               "ToolTip": "D:\\Sanjoy\\My Porject\\ERPApi\\ERPApi\\Data\\ERPDbContext.cs",
               "RelativeToolTip": "ERPApi\\Data\\ERPDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:14:11.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:14:11.626Z"
             }
           ]
         }

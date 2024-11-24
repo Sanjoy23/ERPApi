@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 using WebApp.Data;
 using WebApp.Models;
 
@@ -98,6 +99,12 @@ namespace WebApp.Controllers
 		[HttpGet("GetProductSummary")]
 		public async Task<IActionResult> GetProductSummary()
 		{
+
+			/*
+			SELECT p.strProductName, SUM(o.numQuantity) AS TotalQuantity, SUM(o.numQuantity * p.numUnitPrice) AS TotalRevenue
+			FROM tblOrders o INNER JOIN tblProducts p ON o.intProductId = p.intProductId
+			GROUP BY p.strProductName, p.numUnitPrice;*/
+
 			var summary = await _context.Orders
 						.Join(
 							_context.Products,             
@@ -110,7 +117,7 @@ namespace WebApp.Controllers
 								quantity = (double)order.numQuantity
 							})
 							.GroupBy(
-								x => new { x.strProductName, x.unitPrice } // Group by product details
+								x => new { x.strProductName, x.unitPrice }
 							)
 							.Select(g => new
 							{
