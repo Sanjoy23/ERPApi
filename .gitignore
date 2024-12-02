@@ -72,6 +72,3 @@ desktop.ini
 *.dotMemory
 *.dotTrace
 
-#custom
-OrderRepository.cs
-IOrderRepository.cs

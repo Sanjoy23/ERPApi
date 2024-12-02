@@ -64,3 +64,4 @@ D:\Sanjoy\My Porject\ERPApi\ERPApi\obj\Debug\net6.0\refint\ERPApi.dll
 D:\Sanjoy\My Porject\ERPApi\ERPApi\obj\Debug\net6.0\ERPApi.pdb
 D:\Sanjoy\My Porject\ERPApi\ERPApi\obj\Debug\net6.0\ERPApi.genruntimeconfig.cache
 D:\Sanjoy\My Porject\ERPApi\ERPApi\obj\Debug\net6.0\ref\ERPApi.dll
+D:\Sanjoy\My Porject\ERPApi\ERPApi\obj\Debug\net6.0\ERPApi.sourcelink.json
