@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ERPApi.Implementations;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
@@ -10,17 +11,20 @@ namespace WebApp.Controllers
 	public class ProductsController : Controller
 	{
 		private readonly ERPDbContext _context;
+		private readonly OrderRepository _orderRepo;
 
-		public ProductsController(ERPDbContext context)
+		public ProductsController(ERPDbContext context, OrderRepository orderRepo)
 		{
 			_context = context;
+			_orderRepo = orderRepo;
 		}
 
 		//API 01: Create new Order
 		[HttpPost("CreateOrder")]
 		public async Task<IActionResult> CreateOrder(int productId, string customerName, decimal quantity)
 		{
-			var product = await _context.Products.FindAsync(productId);
+			//var product = await _context.Products.FindAsync(productId);
+			var product = _orderRepo.FindProductByIDAsync(productId);
 			if (product == null) return NotFound("Product not found.");
 
 			if (product.numStock < quantity)
@@ -36,8 +40,9 @@ namespace WebApp.Controllers
 				dtOrderDate = DateTime.Now
 			};
 
-			_context.Orders.Add(order);
-			await _context.SaveChangesAsync();
+			//_context.Orders.Add(order);
+			_orderRepo.AddOrder(order);
+			_orderRepo.SaveOrder();
 
 			return Ok("Order created successfully.");
 		}
@@ -46,18 +51,20 @@ namespace WebApp.Controllers
 		[HttpPut("UpdateOrder")]
 		public async Task<IActionResult> UpdateOrder(int orderId, decimal newQuantity)
 		{
-			var order = await _context.Orders.FirstOrDefaultAsync(o => o.intOrderId == orderId);
+			//var order = await _context.Orders.FirstOrDefaultAsync(o => o.intOrderId == orderId);
+			var order = _orderRepo.FindOrderByID(orderId);
 			if (order == null) return NotFound("Order not found.");
 
 			var difference = newQuantity - order.numQuantity;
-			var product = await _context.Products.FirstOrDefaultAsync(o => o.intProductId == order.intProductId);
+			var product = _orderRepo.FindProductByIDAsync(order.intProductId);
+
 			if (product.numStock < difference)
 				return BadRequest("Insufficient stock.");
 
 			product.numStock -= difference;
 			order.numQuantity = newQuantity;
 
-			await _context.SaveChangesAsync();
+			_orderRepo.SaveOrder();
 			return Ok("Order updated successfully.");
 		}
 

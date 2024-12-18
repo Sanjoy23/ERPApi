@@ -83,9 +83,9 @@ namespace WebApp.Controllers
 
 			var claims = new[]
 			{
-		new Claim(JwtRegisteredClaimNames.Sub, user.Username),
-		new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-	};
+				new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+				new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+			};
 
 			var token = new JwtSecurityToken(
 				issuer: jwtSettings.Issuer,
