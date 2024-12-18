@@ -1,4 +1,5 @@
 ﻿using ERPApi.Implementations;
+using ERPApi.Services.IService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
@@ -11,26 +12,25 @@ namespace WebApp.Controllers
 	public class ProductsController : Controller
 	{
 		private readonly ERPDbContext _context;
-		private readonly OrderRepository _orderRepo;
+		private readonly IOrderServicecs _services;
 
-		public ProductsController(ERPDbContext context, OrderRepository orderRepo)
+		public ProductsController(ERPDbContext context, IOrderServicecs servicecs)
 		{
 			_context = context;
-			_orderRepo = orderRepo;
+			_services = servicecs;
 		}
 
 		//API 01: Create new Order
 		[HttpPost("CreateOrder")]
 		public async Task<IActionResult> CreateOrder(int productId, string customerName, decimal quantity)
 		{
-			//var product = await _context.Products.FindAsync(productId);
-			var product = _orderRepo.FindProductByIDAsync(productId);
+			var product = await _services.FindProductByIDAsync(productId);
 			if (product == null) return NotFound("Product not found.");
 
-			if (product.numStock < quantity)
+			if (product.Stock < quantity)
 				return BadRequest("Insufficient stock.");
 
-			product.numStock -= quantity;
+			product.Stock -= quantity;
 
 			var order = new tblOrder
 			{

@@ -1,6 +1,4 @@
 ﻿using ERPApi.Repository;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using WebApp.Data;
 using WebApp.Models;
 
@@ -30,9 +28,10 @@ namespace ERPApi.Implementations
 			return _context.Orders.Find(orderId);
 		}
 
-		public tblProduct FindProductByIDAsync(int productId)
+		public async Task<tblProduct> FindProductByIDAsync(int productId)
 		{
-			return _context.Products.Find(productId);
+			var product = await _context.Products.FindAsync(productId);
+			return product ?? new tblProduct();
 		}
 
 		public IEnumerable<tblOrder> GetAllOrdersWithDetailsAsync()

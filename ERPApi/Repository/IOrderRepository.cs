@@ -5,7 +5,7 @@ namespace ERPApi.Repository
 {
 	public interface IOrderRepository
 	{
-	    tblProduct FindProductByIDAsync(int productId);
+	    Task<tblProduct> FindProductByIDAsync(int productId);
 		tblOrder FindOrderByID(int orderId);
 		void DeleteOrderByIDAsync(int orderId);
 		void AddOrder(tblOrder order);
